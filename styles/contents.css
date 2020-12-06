@@ -1,0 +1,125 @@
+.sec{
+    height: 100vh;
+    background-color:#fff;
+    display: none;
+}
+
+#home{
+    background-image: url('../images/farming.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-left: 0; padding-right: 0;
+}
+
+#home-cover{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+
+#weather-box, #map-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    min-height: 300px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+#abt-us{
+    padding-left: 0 !important; padding-right: 0 !important;
+}
+
+#abt-us > .row{
+    height: 100%; width: 100%;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+#abt-us-left{
+    height: 100%; width: 100%;
+    background-image: url('../images/about-us.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-left: 0; padding-right: 0;
+}
+#abt-us-right{
+    margin: 0px !important;
+    height: 100%; width: 100%;
+    overflow-y:scroll;
+    padding: 3rem 2rem;
+    color: #333;
+}
+
+
+#mjr-crps{
+    overflow-y: auto;
+}
+
+#crop-selector{
+    width: 300px; height: 25px;
+    margin: auto;
+    background-color: #ddd;
+    margin-top: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    border: solid 1px #bbb;
+}
+
+#crop-selector-left, #crop-selector-right{
+    float: left;
+    width: 50%; height: 100%;
+    text-align: right !important;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    color: darkgreen;
+    background-color: #ddd;
+}
+option{
+    width: 100%;
+    text-align: center !important;
+    background-color: #ddd;
+}
+#crop-selector-left{
+    border-right: solid 1px #bbb;
+}
+
+#sugercane,#jute{
+    display: none;
+}
+
+#state-selector{
+    border-radius: 2px;
+    overflow: hidden;
+}
+#state-selector-left, #state-selector-right{
+    width: 100%;
+    border: none;
+    outline: none !important;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+}
+#state-selector-left{
+    border-bottom: solid 1px #fff;
+}
+#state-selector-right > option{
+    color: #030;
+    background-color: rgba(255,255,255,1);
+}

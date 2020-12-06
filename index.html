@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer's Portal</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/nav-style.css">
+    <link rel="stylesheet" href="./styles/contents.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+</head>
+<body>
+    <div id="navbar">
+        <i class="fas fa-seedling menu-btn home-btn" style="font-size:1.2rem;"></i>
+        <span class="menu-btn hideable abt-btn">About us</span>
+        <span class="menu-btn hideable maj-crp-btn">Major crops</span>
+        <span class="lang-btn hideable">
+            <span class="lang-btns eng-btn" style="color:#ffdd00;">English</span>
+            <span class="lang-btns hin-btn">हिंदी</span>
+            <span class="lang-btns ben-btn">বাংলা</span>
+        </span>
+        <div id="state-selector">
+            <div id="state-selector-left">Select state</div>
+            <select name="" id="state-selector-right">
+                <option id="maha" value="maha">Maharasthra</option>
+                <option id="pun" value="pun">Punjab</option>
+                <option id="wb" value="wb">West Bengal</option>
+            </select>
+        </div>
+        <i id="toggle-btn" class="fas fa-bars menu-btn showable" style="font-size:1.2rem;"></i>
+    </div>
+
+
+    <div id="navbar-dropdown">
+        <span class="menu-btn abt-btn">About us</span>
+        <span class="menu-btn maj-crp-btn">Major crops</span>
+        <span class="lang-btn">
+            <span class="lang-btns eng-btn" style="color:#ffdd00;">English</span>
+            <span class="lang-btns hin-btn">हिंदी</span>
+            <span class="lang-btns ben-btn">বাংলা</span>
+        </span>
+    </div>
+
+
+    <div class="container sec" id="home">
+        <div id="home-cover">
+            <p style="text-align: center;">
+                Welcome to the farmer's portal
+                <!-- কৃষকের পোর্টালে আপনাকে স্বাগতম -->
+                <!-- किसान पोर्टल पर आपका स्वागत है -->
+            </p>
+            <div class="container">
+                <h4 class="text-center city-state">Mumbai, Maharasthra</h4>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div id="weather-box" class="col-sm-4">
+                        <h2 id="temp"></h2>
+                        <h1 id="cond"></h2>
+                        <h4 id="min-max"></h4>
+                    </div>
+                    <div id="map-box" class="col-sm-4">This is map</div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container sec" id="abt-us">
+        <div class="row">
+            <div id="abt-us-left" class="col-sm-6"></div>
+            <div id="abt-us-right" class="col-sm-6">
+                <p id="p1">
+                    Agriculture is the backbone of the Indian Economy"- said Mahatma Gandhi six decades ago. Even today, the situation is still the same, with almost the entire economy being sustained by agriculture, which is the mainstay of the villages. It contributes 16% of the overall GDP and accounts for employment of approximately 52% of the Indian population. Rapid growth in agriculture is essential not only for self-reliance but also to earn valuable foreign exchange.
+                </p>
+                <p id="p2">
+                    Indian farmers are second to none in production and productivity despite of the fact that millions are marginal and small farmers. They adopt improved agriculture technology as efficiently as farmers in developed countries. It is felt that with provision of timely and adequate inputs such as fertilizers, seeds, pesticides and by making available affordable agricultural credit /crop insurance, Indian farmers are going to ensure food and nutritional security to the Nation.
+                </p>
+                <p id="p3">
+                    It is envisaged to make available relevant information and services to the farming community and private sector through the use of information and communication technologies, to supplement the existing delivery channels provided for by the department. Farmers’ Portal is an endeavour in this direction to create one stop shop for meeting all informational needs relating to Agriculture, Animal Husbandry and Fisheries sectors production, sale/storage of an Indian farmer. With this Indian Farmer will not be required to sift through maze of websites created for specific purposes.
+                </p>
+                <p id="p4">
+                    Once in the Farmers’ Portal, a farmer will be able to get all relevant information on specific subjects around his village/block /district or state. This information will be delivered in the form of text, SMS, email and audio/video in the language he or she understands. These levels can be easily reached through the Map of India placed on the Home page. Farmers will also be able to ask specific queries as well as give valuable feedback through the Feedback module specially developed for the purpose.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container sec" id="mjr-crps">
+        <div id="crop-selector">
+            <div id="crop-selector-left">Select crop</div>
+            <select name="" id="crop-selector-right">
+                <option id="wheat-sel" value="wheat">Wheat</option>
+                <option id="suger-sel" value="suger">Sugarcane</option>
+                <option id="jute-sel" value="jute">Jute</option>
+            </select>
+        </div>
+
+        <table id="wheat" class="table table-striped text-center mt-5 w-100 crops-class">
+            <thead>
+              <tr>
+                <th>Zones</th>
+                <th>States/Regions covered</th>
+                <th style="width: 300px;">Approx Area(Million ha)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Northern Hill Zone(NHZ)</td>
+                <td>Hilly areas of J&K( except Jammu, Kathua and Samba districts), Himachal Pradesh ( except Una & Paonta valley),Uttarakhand(excluding Tarai region) & Sikkim</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>North Western Plains Zone(NWPZ)</td>
+                <td>Punjab,Haryana,Western UP(except Jhansi Div),Rajasthan (excluding Kota & Udaipur div),Delhi, Tarai region of Uttarakhand, Una & Paonta valley of HP, Jammu,Samba & Kathua districts of J&K and Chandigarh.</td>
+                <td>11.55</td>
+              </tr>
+              <tr>
+                <td>Central Zone</td>
+                <td>MP,Gujarat,Chattisgarh,Kota & Udaipur Div of Rajasthan & Jhansi Div of UP.</td>
+                <td>5.2</td>
+              </tr>
+              <tr>
+                <td>Southern Hill Zone(SHZ)</td>
+                <td>Nilgiris & Palani Hills of Tamil Nadu</td>
+                <td>0.1</td>
+              </tr>
+            </tbody>
+        </table>
+
+        <div id="sugercane" class="row mt-5 p-5 crops-class">
+            <div class="col-12">
+                <h4>About Sugercane</h4>
+                <p>
+                    Sugarcane (Saccharum officinarum) family Gramineae (Poaceae) is widely grown crop in India. It provides employment to over a million people directly or indirectly besides contributing significantly to the national exchequer. Sugarcane growing countries of the world lay between the latitude 36.7° north and 31.0° south of the equator extending from tropical to subtropical zones. Sugar cane originated in New Guinea where it has been known for thousands of years. Sugar cane plants spread along human migration routes to Asia and the Indian subcontinent. Here it cross-bred with some wild sugar cane relatives to produce the commercial sugar cane we know today.
+                </p>
+                <p>
+                    Cultivation of sugarcane in India dates back to the Vedic period. The earliest mention of sugarcane cultivation is found in Indian writings of the period 1400 to 1000 B.C. It is now widely accepted that India is the original home of Saccharum species. Saccharum barberi and Polynesian group of island especially New Guinea is the centre of origin of S. officinarum. It belongs to family Gramineae (Poaceae), class monocotyledons and order glumaceae sub family panicoidae, tribe Andripogoneae and sub tribe saccharininea. The cultivated canes belong to two main groups: (a) thin, hardy north Indian types S.barberi and S.Sinense and (b) thick, juicy noble canes Saccharum officinarum. Highly prized cane is S. officinarum.
+                </p>
+
+                <h4>Important regions/ zones for sugarcane cultivation in India</h4>
+                <p>
+                    Broadly there are two distinct agro-climatic regions of sugarcane cultivation in India, viz., tropical and subtropical. However, five agro-climatic zones have been identified mainly for the purpose of varietal development. They are (i)North Western Zone (ii) North Central Zone (iii) North Eastern Zone (iv) Peninsular Zone (v) Coastal Zone.
+                </p>
+                <p>
+                    Tropical region Shared about 45% and 55% of the total sugarcane area and production in the country, respectively along with the average productivity of 77 t/ha (2011-12). Sub-tropical region accounted for about 55% and 45% of total area and production of sugarcane with an average productivity about 63 t/ha (2011-12)
+                </p>
+            </div>
+        </div>
+
+        <table id="jute" class="table table-striped text-center mt-5 w-100 crops-class">
+            <thead>
+              <tr>
+                <th>State</th>
+                <th>Variety</th>
+                <th>Mesta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bihar</td>
+                <td>JBO-2003H (Ira), JRO-204 (Suren), S-19 (Subala), JRO-8432 (Shakti), JRO-128 (Surya), JRO-66 (Golden Jubilee Tossa), CO-58 (Sourav), JBO-1 (Sudhangshu), JRC-698, JBC-5 (Arpita), RRPS-27-C-3 (Monalisa)</td>
+                <td>GR-27 (Madhuri) and MT-150 (Nirmal), JRM-5(Shrestha)</td>
+              </tr>
+              <tr>
+                <td>Meghalaya</td>
+                <td>JRO-204 (Suren),
+                    S-19 (Subala), JRO-8432 (Shakti), CO-58 (Sourav), JBO-1 (Sudhangshu), JBC-5 (Arpita)</td>
+                <td>Shrestha</td>
+              </tr>
+              <tr>
+                <td>Orissa</td>
+                <td>JBO-2003H (Ira), JRO-204 (Suren), S-19 (Subala), JRO-8432 (Shakti), JRO-128 (Surya), JRO-66 (Golden Jubilee Tossa), CO-58 (Sourav), JBO-1 (Sudhangshu), JBC-5 (Arpita), RRPS-27-C-3 (Monalisa)</td>
+                <td>AMV-5 (Durga), GR-27 (Madhuri) and MT-150 (Nirmal), JRM-5 (Shrestha)</td>
+              </tr>
+              <tr>
+                <td>T<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrXawXxVPxR6nBFeXvoOsZECxfZNQEugc&callback=myMap"></script>ripura</td>
+                <td>AUOJ-1 (Tarun), JBO-2003H (Ira), JRO-204 (Suren), S-19 (Subala), JRO-8432 (Shakti), CO-58 (Sourav), JBO-1 (Sudhangshu), JBC-5 (Arpita)</td>
+                <td>GR-27 (Madhuri) and MT-150 (Nirmal), JRM-5 (Shrestha)</td>
+              </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <div class="container sec" id="pst-hvst">
+        this is post harvest
+    </div>
+
+
+    <div class="footer container-fluid" style="display: block; float: left;">
+        <div class="row">
+            <div class="col-sm-4"><i class="fas fa-seedling menu-btn" style="font-size:4rem;"></i></div>
+            <div class="col-sm-8 text-center">
+                <h5>This website is a created by Rahit Mondal for the participation in Decode 9.0 hackathon organised by Boardinfinty</h5>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/lang.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/renderLang.js"></script>
+    <script src="./scripts/body.js"></script>
+    <script src="./scripts/crops.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrXawXxVPxR6nBFeXvoOsZECxfZNQEugc&callback=myMap"></script>
+    <script src="./scripts/map.js"></script>
+    <script src="./scripts/weather.js"></script>
+</body>
+</html>
